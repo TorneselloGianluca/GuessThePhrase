@@ -121,21 +121,21 @@
 
 1) Schermata LOGIN
 
-![Screenshot](client\screenshot\Screenshot1.png)
+![Screenshot](client/screenshot/Screenshot1.png)
 
 2) Schermata HOME per utente loggato 
 
-![Screenshot](client\screenshot\Screenshot4.png)
+![Screenshot](client/screenshot/Screenshot4.png)
 
 
 3) Schermata di GIOCO
 
-![Screenshot](client\screenshot\Screenshot3.png)
+![Screenshot](client/screenshot/Screenshot3.png)
 
 
 4) Schermata VITTORIA PARTITA
 
-![Screenshot](client\screenshot\Screenshot2.png)
+![Screenshot](client/screenshot/Screenshot2.png)
 
 
 
