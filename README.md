@@ -116,7 +116,7 @@
 
 1) Schermata HOME
 
-![Screenshot](client\screenshot\Screenshot5.png)
+![Screenshot](client/screenshot/Screenshot5.png)
 
 
 1) Schermata LOGIN
