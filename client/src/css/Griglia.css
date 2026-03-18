@@ -1,0 +1,105 @@
+:root {
+  /* Dimensioni e palette */
+  --cell: 42px;
+  --gap-intra-word: 4px;   /* spazio tra lettere nella stessa parola */
+  --gap-words: 10px;       /* spazio tra parole */
+  --space-width: 26px;     /* larghezza tessera per uno spazio */
+
+  --letter-border: #222;
+
+  /* ⬇️ Spazi NERI */
+  --space-bg: #000;
+  --space-border: #000;
+
+  --success-bg: #d1e7dd;
+  --success-border: #0f5132;
+  --error-bg: #f8d7da;
+  --error-border: #842029;
+}
+
+.griglia-container {
+  display: flex;
+  flex-wrap: wrap;               /* va a capo ma solo tra .word e .space-block */
+  align-items: flex-start;
+  gap: var(--gap-words);         /* distanza tra parole (e blocchi spazio) */
+  max-width: min(92vw, 1100px);
+  justify-content: center;
+    
+  padding: 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 2px solid transparent;
+  transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+/* Stati di feedback */
+.griglia-container.success {
+  background-color: var(--success-bg);
+  border-color: var(--success-border);
+}
+.griglia-container.error {
+  background-color: var(--error-bg);
+  border-color: var(--error-border);
+}
+
+/* Ogni parola è un gruppo non spezzabile */
+.word {
+  display: inline-flex;
+  flex-wrap: nowrap;             /* non spezzare dentro la parola */
+  gap: var(--gap-intra-word);
+}
+
+/* Celle lettera */
+.letter-cell {
+  width: var(--cell);
+  height: var(--cell);
+  border: 2px solid var(--letter-border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: calc(var(--cell) * 0.48);
+  background-color: white;
+  color: #000;                   /* testo nero */
+  user-select: none;
+  transition: background-color .25s ease, transform .1s ease;
+}
+
+/* Highlight verde temporaneo per nuove lettere rivelate */
+.letter-cell.highlight {
+  background-color: var(--success-bg);
+}
+
+/* Blocchi di spazi: composti da N tessere, non spezzabili tra loro */
+.space-block {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 3px;
+  height: var(--cell);
+  flex: 0 0 auto;                /* non far crescere oltre il contenuto */
+  align-items: center;
+}
+
+/* Tessera dello spazio: NERA */
+.space-cell {
+  width: var(--space-width);
+  height: var(--cell);
+  background-color: var(--space-bg);     /* nero */
+  border: 2px solid var(--space-border); /* nero */
+  border-radius: 8px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12); /* leggero rilievo */
+}
+
+/* Testo sotto */
+.num-letters {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive: stringi leggermente su schermi piccoli */
+@media (max-width: 600px) {
+  :root { --cell: 36px; --space-width: 22px; }
+}

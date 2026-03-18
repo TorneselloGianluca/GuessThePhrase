@@ -1,0 +1,146 @@
+:root {
+  /* altezza navbar (aggiorna se diversa) */
+  --navbar-h: 70px;
+
+  /* palette bottoni */
+  --btn-primary-start: #7c5cff;
+  --btn-primary-end:   #4f46e5;
+  --btn-primary-shadow: rgba(79,70,229,.35);
+
+  --btn-ghost-bg: rgba(255,255,255,.18);
+  --btn-ghost-border: rgba(255,255,255,.45);
+  --btn-ghost-shadow: rgba(15,23,42,.18);
+}
+
+/* Layout pagina home: riempi viewport meno navbar */
+.home-page {
+  min-height: calc(100dvh - var(--navbar-h));
+  padding: 1rem;
+  padding-top: calc(1rem + var(--navbar-h));
+  display: block;
+  background: transparent !important;
+  box-sizing: border-box;
+}
+
+/* Contenitore compatto */
+.home-content {
+  background: transparent;
+  border-radius: 24px;
+  box-shadow: none;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+/* Logo vicino ai contenuti */
+.home-content .logo-tight {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 .5rem;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.15));
+}
+
+/* Titoli */
+.welcome-text h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+}
+.welcome-text h3 { font-size: 1.6rem; }
+
+/* Username colorato */
+.username { color: #6366f1; }
+
+/* Badge monete */
+.coin-badge {
+  font-size: 1.6rem !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 🔷 Azioni (contenitore bottoni) */
+.home-actions {
+  gap: 1rem !important;            /* un filo più largo del default */
+}
+
+/* 🎨 Bottoni carini */
+.btn-ico {
+  display: inline-block;
+  margin-right: .5rem;
+  transform: translateY(-1px);
+}
+
+/* Primario con gradiente + glow */
+.btn-fancy {
+  --pad-y: 0.75rem;
+  --pad-x: 1.3rem;
+  padding: var(--pad-y) var(--pad-x);
+  border-radius: 14px !important;
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .2px;
+  background: linear-gradient(135deg, var(--btn-primary-start), var(--btn-primary-end));
+  box-shadow:
+    0 10px 22px var(--btn-primary-shadow),
+    inset 0 0 0 1px rgba(255,255,255,.12);
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+.btn-fancy:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+  box-shadow:
+    0 14px 30px var(--btn-primary-shadow),
+    inset 0 0 0 1px rgba(255,255,255,.16);
+}
+.btn-fancy:active {
+  transform: translateY(0);
+  filter: brightness(.98);
+}
+.btn-fancy:focus-visible {
+  outline: 3px solid rgba(99,102,241,.45);
+  outline-offset: 2px;
+}
+
+/* Secondario “glass” */
+.btn-ghost {
+  --pad-y: 0.75rem;
+  --pad-x: 1.3rem;
+  padding: var(--pad-y) var(--pad-x);
+  border-radius: 14px !important;
+  border: 1px solid var(--btn-ghost-border);
+  background: var(--btn-ghost-bg);
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: .2px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 16px var(--btn-ghost-shadow);
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease, background-color .12s ease;
+}
+@media (prefers-color-scheme: dark) {
+  .btn-ghost { color: #e5e7eb; }
+}
+.btn-ghost:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.24);
+  box-shadow: 0 10px 22px var(--btn-ghost-shadow);
+}
+.btn-ghost:active { transform: translateY(0); }
+.btn-ghost:focus-visible {
+  outline: 3px solid rgba(148,163,184,.45);
+  outline-offset: 2px;
+}
+
+/* Bordo dei video */
+.video-bordered {
+  border: 4px solid #6366f1;
+  border-radius: 12px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .home-page { padding-top: calc(.5rem + var(--navbar-h)); }
+  .home-content { padding: 1rem .75rem; }
+  .welcome-text h2 { font-size: 2.4rem; }
+  .welcome-text h3 { font-size: 1.3rem; }
+  .home-actions { gap: .75rem !important; }
+}

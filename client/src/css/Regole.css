@@ -1,0 +1,36 @@
+/* Regole.css */
+.regole-page {
+  background: linear-gradient(180deg,#fafafa,#f0f9ff);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.regole-page h1 {
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.regole-page .alert {
+  background: #eef2ff;
+  border-left: 4px solid #6366f1;
+  border-radius: 12px;
+}
+
+.regole-page .card {
+  border-radius: 18px;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+.regole-page .card-body {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.regole-page mark {
+  background: transparent;
+  color: #dc2626;
+  font-weight: 700;
+}

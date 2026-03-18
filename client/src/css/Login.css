@@ -1,0 +1,126 @@
+/* === Stile per la pagina di Login === */
+
+/* Pagina di login */
+.login-page {
+  background: transparent !important; /* usa lo sfondo globale */
+  min-height: 100dvh;                 /* meglio di 100vh su mobile */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;                 /* un po’ di aria ai bordi */
+  overflow-y: auto;                   /* permetti lo scroll se serve */
+}
+
+
+/* Contenitore del Card (login box) */
+.login-container {
+  background-color: #ffffff; /* Sfondo bianco per il contenitore */
+  border-radius: 10px; /* Bordo arrotondato per il card */
+  box-shadow: 0 4px 8px white(0, 0, 0, 0.1); /* Ombra per un effetto 3D */
+  padding: 2rem; /* Padding interno */
+  width: 100%;
+  max-width: 420px; /* Limitato a 420px di larghezza */
+  margin: 0 auto;   /* Centra orizzontalmente */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo della pagina di login */
+.login-logo {
+  margin-bottom: 1rem; /* Distanza dal titolo */
+  border-radius: 50%; /* Rende il logo circolare */
+  transition: transform 0.3s ease; /* Aggiunge animazione al logo */
+}
+
+.login-logo:hover {
+  transform: scale(1.1); /* Ingrandisce il logo al passaggio del mouse */
+}
+
+/* Titolo della pagina */
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Stili generali per il form */
+.login-card {
+  padding: 1.5rem;
+  border: none; /* Rimuove il bordo */
+  background-color: rgb(255, 255, 255);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+/* Input campo form */
+.form-control {
+  border-radius: 0.5rem; /* Angoli arrotondati per gli input */
+  border: 1px solid #ced4da; /* Colore del bordo */
+  padding: 0.75rem 1rem; /* Padding interno */
+}
+
+/* Pulsante di toggle password */
+.toggle-password-btn {
+  border-radius: 0 0.5rem 0.5rem 0; /* Arrotonda solo l'angolo destro */
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-password-btn:hover {
+  background-color: #e0e0e0; /* Colore di hover */
+}
+
+/* Checkbox Remember Me */
+.form-check-label {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+}
+
+/* Errore di login */
+.text-danger {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Pulsanti di login */
+button {
+  border-radius: 0.5rem; /* Bordo arrotondato per i bottoni */
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #6c757d; /* Colore disabilitato */
+  border-color: #6c757d;
+}
+
+/* Pulsante "Torna alla Home" */
+button.mt-2 {
+  background-color: #f8f9fa;
+  border-color: #ccc;
+}
+
+button.mt-2:hover {
+  background-color: #e2e6ea;
+  border-color: #b8c2cc;
+}
